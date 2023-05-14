@@ -1,0 +1,49 @@
+#AboutUs {
+  margin-top: 5rem;
+
+  h1 {
+    color: $primary-color;
+  }
+
+  .aboutus-text {
+    text-align: center;
+    color: $secondary-color;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+
+  .cards {
+    align-items: center;
+    max-width: 100%;
+
+    .card {
+      display: flex;
+      align-items: center;
+      border-bottom: solid 0.1px $border-color;
+      gap: 1.5rem;
+
+      .card-content {
+        .card-text {
+          transition: 0.2s;
+
+          &:hover {
+            letter-spacing: 3px;
+          }
+        }
+        p {
+          font-size: 1.1rem;
+          transition: 0.5s;
+
+          &:hover {
+            transform: translateY(-5px);
+          }
+        }
+      }
+
+      img {
+        width: 400px;
+      }
+    }
+  }
+}

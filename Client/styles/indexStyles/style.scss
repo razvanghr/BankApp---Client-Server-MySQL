@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100;1,200;1,300;1,400;1,500&display=swap");
+$background-color: #f3f3f3;
+$primary-color: #5ec576;
+$secondary-color: #37383d;
+$border-color: #16a45d;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: $background-color;
+}
+
+.container {
+  max-width: 100%;
+  margin: 2rem;
+}
+
+hr {
+  margin-top: 10rem;
+}
+
+@import "./header";
+@import "./main";
+@import "./aboutUs";
+@import "./footer";
+@import "./reclama";

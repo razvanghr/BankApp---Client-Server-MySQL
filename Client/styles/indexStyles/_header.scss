@@ -1,0 +1,43 @@
+@mixin openAccount {
+  background-color: $primary-color;
+  padding: 0.5rem;
+  border-radius: 20px;
+  color: black;
+  border: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  flex-wrap: wrap;
+
+  .title-logo {
+    font-size: 1.5rem;
+  }
+
+  .navigation {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+    cursor: default;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: 0.5s;
+
+    &:hover {
+      transform: translateY(-2px);
+      transition: 0.2s;
+    }
+  }
+  .open-account {
+    @include openAccount();
+  }
+}

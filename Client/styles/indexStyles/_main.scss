@@ -1,0 +1,28 @@
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+
+  .info-box {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    .open-account {
+      @include openAccount();
+      font-size: 1.5rem;
+      margin: 1rem 0;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: #66d480;
+      }
+    }
+  }
+
+  img {
+    width: 400px;
+  }
+}
