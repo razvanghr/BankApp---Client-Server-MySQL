@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100;1,200;1,300;1,400;1,500&display=swap");
+$background-color: #f3f3f3;
+$primary-color: #5ec576;
+$secondary-color: #37383d;
+$border-color: #16a45d;
+$grey-color: #f3f3f3;
+$loan-color: #ff5252;
+$yellow-color: #e69b00;
+
+@mixin box-Shadow {
+  -webkit-box-shadow: -1px 1px 14px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 1px 14px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 1px 14px 0px rgba(0, 0, 0, 0.75);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  padding: 1rem;
+}
+
+//--------- Balance
+
+.balance {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  #current-balance {
+    font-size: 2rem;
+
+    margin-right: 5rem;
+  }
+}
+
+@import "./AcountInfo";
+
+.logOut {
+  margin-top: 1rem;
+
+  button {
+    background-color: $secondary-color;
+    border: 0;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    color: white;
+    padding: 0.5rem;
+    transition: 0.4s;
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+}

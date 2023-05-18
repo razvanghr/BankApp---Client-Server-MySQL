@@ -2,10 +2,18 @@ const express = require("express");
 const cors = require("cors");
 const db = require("./database/database.js");
 const usserAccountRouter = require("./routes/ussersAccount.js");
+const session = require("express-session");
 
 const app = express();
 app.use(express.json());
 app.use(cors());
+app.use(
+  session({
+    secret: "cookie-secret",
+    resave: false,
+    saveUnitialized: false,
+  })
+);
 
 // ---- UserAccountRouter
 app.use("/user", usserAccountRouter);
@@ -18,6 +26,7 @@ db.connect((error) => {
 });
 
 app.get("/", (req, res) => {
+  req.session.isAuth = true;
   res.send("Salut din main");
 });
 

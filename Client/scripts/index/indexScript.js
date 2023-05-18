@@ -13,10 +13,6 @@ openAccountBTN.forEach((btn) => {
 });
 
 //Login Account
-const loginAccountBTN = document.querySelector(".login-account");
-loginAccountBTN.addEventListener("click", () => {
-  let url = "http://127.0.0.1:5500/Client/login.html";
-  location.href = url;
-});
+
 //Smoth Scroll
 smothScrollFunction(".nav-link");
