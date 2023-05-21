@@ -47,6 +47,7 @@ body {
 
 .logOut {
   margin-top: 1rem;
+  margin-bottom: 6rem;
 
   button {
     background-color: $secondary-color;
@@ -60,4 +61,21 @@ body {
       transform: translateY(-2px);
     }
   }
+}
+
+#stats {
+  padding: 2rem;
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+.loan {
+  background-color: $primary-color;
+}
+
+.transfer {
+  background-color: $yellow-color;
 }

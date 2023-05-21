@@ -28,6 +28,7 @@ body {
   display: flex;
   background-color: rgb(255, 255, 255);
   align-items: center;
+  justify-content: space-around;
   gap: 4rem;
   flex-wrap: wrap;
 }
@@ -51,12 +52,19 @@ body {
   gap: 1rem;
   border-bottom: solid 1px rgb(84, 77, 77);
 }
-.account .movements .mov .mov-type {
+.account .movements .mov .mov-type-Loan {
   font-size: 0.9rem;
   background-color: #5ec576;
   border-radius: 20px;
   padding: 0.3rem;
-  color: white;
+  color: #000000;
+}
+.account .movements .mov .mov-type-Transfer {
+  font-size: 0.9rem;
+  background-color: #e69b00;
+  border-radius: 20px;
+  padding: 0.3rem;
+  color: #000000;
 }
 .account .movements .mov .mov-value {
   margin-left: 20rem;
@@ -119,6 +127,7 @@ body {
 
 .logOut {
   margin-top: 1rem;
+  margin-bottom: 6rem;
 }
 .logOut button {
   background-color: #37383d;
@@ -131,4 +140,21 @@ body {
 }
 .logOut button:hover {
   transform: translateY(-2px);
+}
+
+#stats {
+  padding: 2rem;
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+.loan {
+  background-color: #5ec576;
+}
+
+.transfer {
+  background-color: #e69b00;
 }/*# sourceMappingURL=style.css.map */

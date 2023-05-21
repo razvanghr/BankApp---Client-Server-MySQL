@@ -31,8 +31,10 @@ const accountLogin = async (req, res) => {
       const [
         [
           {
+            account_id: account_id,
             first_Name: ac_firstName,
             last_Name: ac_lastName,
+            account_money: ac_money,
             email: ac_email,
             account_password: encryptPassword,
             PIN: encryptedPIN,
@@ -44,21 +46,16 @@ const accountLogin = async (req, res) => {
 
       const match = await bcrypt.compare(password, encryptPassword);
       if (match) {
-        const accountInfo = [
+        const accountID = [
           {
-            ac_firstName: ac_firstName,
-            ac_last_Name: ac_lastName,
-            ac_email: ac_email,
-            ac_pin: pin,
-            ac_regDate: ac_regDate,
+            account_id: account_id,
           },
         ];
 
-        res.send(accountInfo);
+        res.send(accountID);
       } else {
         res.send("false");
       }
-      console.log(result);
     }
   } catch (error) {
     console.log(error);

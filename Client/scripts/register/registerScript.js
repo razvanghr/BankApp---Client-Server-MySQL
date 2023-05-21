@@ -48,15 +48,15 @@ const sendRegisterData = async function () {
 const trueRegister = () => {
   const html = `
   <div class="container">
-    <h1 style="margin-bottom:10rem"> Inregistrat cu succes </h1>
+    <h1 style="margin-bottom:10rem"> Registered successfully </h1>
     </div>`;
 
-  statusText.innerText = "Inregistrat cu succes";
+  statusText.innerText = "Registered successfully";
   registerContainer.classList.add("fadeOut");
   registerContainer.innerHTML = html;
   registerContainer.classList.add("fadeIN");
   const registerTimeout = setTimeout(() => {
-    const url = `http://127.0.0.1:5500/Client/login.html`;
+    const url = `http://127.0.0.1:5500/Client/account.html`;
     location.href = url;
   }, 3000);
 };

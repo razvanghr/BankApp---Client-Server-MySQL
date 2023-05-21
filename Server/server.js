@@ -2,21 +2,18 @@ const express = require("express");
 const cors = require("cors");
 const db = require("./database/database.js");
 const usserAccountRouter = require("./routes/ussersAccount.js");
-const session = require("express-session");
+const usserAccountOptions = require("./routes/otionsAccount.js");
 
 const app = express();
-app.use(express.json());
 app.use(cors());
-app.use(
-  session({
-    secret: "cookie-secret",
-    resave: false,
-    saveUnitialized: false,
-  })
-);
+app.use(express.json());
 
 // ---- UserAccountRouter
 app.use("/user", usserAccountRouter);
+
+//----- UserAccountOptions
+
+app.use("/api", usserAccountOptions);
 
 const PORT = 3000;
 
@@ -26,7 +23,6 @@ db.connect((error) => {
 });
 
 app.get("/", (req, res) => {
-  req.session.isAuth = true;
   res.send("Salut din main");
 });
 

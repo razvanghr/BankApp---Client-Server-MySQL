@@ -2,6 +2,7 @@
   display: flex;
   background-color: rgb(255, 255, 255);
   align-items: center;
+  justify-content: space-around;
   gap: 4rem;
   flex-wrap: wrap;
 
@@ -25,16 +26,22 @@
       gap: 1rem;
       border-bottom: solid 1px rgb(84, 77, 77);
 
-      .mov-type {
+      .mov-type-Loan {
         font-size: 0.9rem;
         background-color: $primary-color;
         border-radius: 20px;
         padding: 0.3rem;
-        color: #ffff;
+        color: #000000;
       }
 
-      .mov-date {
+      .mov-type-Transfer {
+        font-size: 0.9rem;
+        background-color: $yellow-color;
+        border-radius: 20px;
+        padding: 0.3rem;
+        color: #000000;
       }
+
       .mov-value {
         margin-left: 20rem;
       }
